@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anzan Training</title>
+    <link href='/assets/css/app.css' rel='stylesheet'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='/assets/js/app.js'></script>
+    <script src='/assets/js/jquery.hotkeys-0.7.9.min.js'></script>
+</head>
+<body>
+    <h1>Soroban Training Game</h1>
+    <div id='welcome'>
+        <label>Blink time:</label>
+        <input id='blinkTime' type='text' value='0.3'/>
+        <p>
+        Number of numbers:
+        <select id="numNumbers">
+            <option selected value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        </p>
+            Number Range:
+                <input type="text" id="min" value="-50">
+                to <input type="text" id="max" value="100">
+        <p>
+        Duration:
+        <select id='duration' name='duration'>
+            <option value='30'>30 seconds</option>
+            <option value='60'>60 seconds</option>
+            <option value='120'>120 seconds</option>
+            <option selected value='300'>300 seconds</option>
+            <option value='600'>600 seconds</option>
+        </select>
+        </p>
+        <button id='start' value='start'>Start</button>
+    </div>
+
+    <div id='game'>
+        <div align='right'>
+            <h2 id='gameClock'>CLOCK</h2>
+        </div>
+        <div align='right'>
+            <h2 id='score'>0</h2>
+        </div>
+        <br>
+        <div align='center'>
+            <table>
+                <tr>
+                    <td>
+                        <h1 id='numbers' style='opacity:0;'>null</h1>
+                    </td>
+                </tr>
+            </table>
+            <center><input type="text" id="guess"/></center>
+            <button id='showAgain' value='showAgain'>Show again</button>
+        </div>
+        <div id='answer' style='display: none;'/>
+    </div>
+</body>
+</html>
